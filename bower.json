@@ -6,7 +6,7 @@
     "Koen Dirk van Esterik <koen@flipflopinteractive.com>"
   ],
   "description": "Vimeo player for jQuery inspired by Pupunzi's jquery.mb.ytplayer",
-  "main": "jquery-vimeo-player.js",
+  "main": "./src/scripts/jquery-vimeo-player.js",
   "keywords": [
     "jquery",
     "vimeo",
@@ -19,5 +19,12 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "froogaloop": "~0.1.0"
+  },
+  "devDependencies": {
+    "normalize.less": "~1.0.0"
+  }
 }

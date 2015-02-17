@@ -1,0 +1,40 @@
+{
+  "name": "jquery-vimeo-player",
+  "version": "0.0.1",
+  "description": "Vimeo player for jQuery inspired by Pupunzi's jquery.mb.ytplayer.",
+  "main": "./src/scripts/jquery-vimeo-player.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FlipFlopInteractive/jquery-vimeo-player.git"
+  },
+  "keywords": [
+    "jquery",
+    "vimeo",
+    "player"
+  ],
+  "author": "Koen Dirk van Esterik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FlipFlopInteractive/jquery-vimeo-player/issues"
+  },
+  "homepage": "https://github.com/FlipFlopInteractive/jquery-vimeo-player",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^2.2.0",
+    "grunt-bower-concat": "^0.4.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-less": "^1.0.0",
+    "grunt-contrib-uglify": "^0.7.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-express": "^1.4.1",
+    "grunt-open": "^0.2.3",
+    "jshint-stylish": "^1.0.0",
+    "load-grunt-tasks": "^3.1.0"
+  }
+}

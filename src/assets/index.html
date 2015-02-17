@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+	<head>
+
+		<meta charset="utf-8" />
+		<title>jQuery Vimeo player | Flip-Flop Interactive</title>
+		<meta name="description" content="" />
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="./css/styles.css" />
+
+	</head>
+
+	<body>
+
+		<div id="background"></div>
+
+		<script type="text/javascript" src="./js/libs.js"></script>
+		<script type="text/javascript" src="./js/jquery-vimeo-player.js"></script>
+		<script>
+
+			$( document ).ready( function(){
+
+				$( '#background' ).vimeofy({
+
+					'url': 'https://vimeo.com/119705174',
+					'color': '#4AD9D9',
+					'autoplay': true,
+					'loop': true,
+				});
+			});
+
+		</script>
+
+	</body>
+	
+</html>
