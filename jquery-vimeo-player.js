@@ -10,9 +10,20 @@
 
     "use strict";
 
-    function initVimeoPlayer(){
+    function VimeoPlayer( element ){
 
-        console.log( 'Hello world' );
+        this.$element = $( element );
+
+        this.init();
+    }
+
+    VimeoPlayer.prototype.init = function(){
+
+        var player = this;
+
+        player.$iframe = $( '<iframe src="//player.vimeo.com/video/119705174?title=0&amp;byline=0&amp;portrait=0&amp;color=4ad9d9&amp;autoplay=1&amp;loop=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>' );
+
+        player.$element.append( player.$iframe );
     }
 
 
