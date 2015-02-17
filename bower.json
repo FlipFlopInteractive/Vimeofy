@@ -1,0 +1,23 @@
+{
+  "name": "jquery-vimeo-player",
+  "version": "0.0.1",
+  "homepage": "https://github.com/FlipFlopInteractive/jquery-vimeo-player",
+  "authors": [
+    "Koen Dirk van Esterik <koen@flipflopinteractive.com>"
+  ],
+  "description": "Vimeo player for jQuery inspired by Pupunzi's jquery.mb.ytplayer",
+  "main": "jquery-vimeo-player.js",
+  "keywords": [
+    "jquery",
+    "vimeo",
+    "player"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
