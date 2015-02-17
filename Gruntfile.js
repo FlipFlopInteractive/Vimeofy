@@ -47,8 +47,8 @@ module.exports = function( grunt ){
 
 		concat: {
 			all: {
-				src: './src/scripts/jquery-vimeo-player.js',
-				dest: './dist/js/jquery-vimeo-player.js'
+				src: './src/scripts/vimeofy.js',
+				dest: './dist/js/vimeofy.js'
 			}
 		},
 

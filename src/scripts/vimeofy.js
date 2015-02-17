@@ -1,7 +1,7 @@
 /*
- *  jQuery-Vimeo-player - v0.3.0
- *  Vimeo player for jQuery inspired by Pupunzi's jquery.mb.ytplayer
- *  https://github.com/FlipFlopInteractive/jquery-vimeo-player
+ *  Vimeofy - v0.3.0
+ *  jQuery plugin that applies a Vimeo player to a DOM element, inspired by Pupunzi's jquery.mb.ytplayer and VodkaBears' Vide.
+ *  https://github.com/FlipFlopInteractive/Vimeofy
  *
  *  Made by Koen Dirk van Esterik
  *  Under MIT License
@@ -12,7 +12,7 @@
 
 
 	/**
-	 * Vide settings
+	 * Vimeofy settings
 	 * @private
 	 */
 	var pluginName 	= 'vimeofy';

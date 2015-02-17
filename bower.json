@@ -1,12 +1,12 @@
 {
-  "name": "jquery-vimeo-player",
+  "name": "Vimeofy",
   "version": "0.0.1",
-  "homepage": "https://github.com/FlipFlopInteractive/jquery-vimeo-player",
+  "homepage": "https://github.com/FlipFlopInteractive/Vimeofy",
   "authors": [
     "Koen Dirk van Esterik <koen@flipflopinteractive.com>"
   ],
-  "description": "Vimeo player for jQuery inspired by Pupunzi's jquery.mb.ytplayer",
-  "main": "./src/scripts/jquery-vimeo-player.js",
+  "description": "jQuery plugin that applies a Vimeo player to a DOM element, inspired by Pupunzi's jquery.mb.ytplayer and VodkaBears' Vide.",
+  "main": "./src/scripts/vimeofy.js",
   "keywords": [
     "jquery",
     "vimeo",
