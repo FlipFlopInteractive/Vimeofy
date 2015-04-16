@@ -31,7 +31,7 @@
 
 		this.$element = $( element );
 		this.url = parseUrl( options );
-		this.init();
+		this.init( parseInt( options.delay ));
 	}
 
 
@@ -58,30 +58,33 @@
 	 * Initialization
 	 * @public
 	 */
-	Vimeofy.prototype.init = function(){
+	Vimeofy.prototype.init = function( delay ){
 
 		var vimeofy = this;
 
-		// vide.$element.prepend(vide.$wrapper);
-
+		if( !delay ){ delay = 0; }
 		if( !isIOS && !isAndroid ){
 
 			// Declare player instance
-			vimeofy.$player = $( '<iframe frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>' );
+			vimeofy.$player = $( '<iframe frameborder="0" allowTransparency="true" style="background:transparent;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>' );
 			vimeofy.$player.attr( 'src', vimeofy.url );
 
 			// Append player
 			vimeofy.$element.append( vimeofy.$player );
 
 			// Disable visibility, while loading
-			vimeofy.$player.css( 'visibility', 'hidden' );
+			vimeofy.$player.css({ 'visibility': 'hidden' });
 
+			// Initiation by Froogaloop library
 			$f( vimeofy.$player[ 0 ] ).addEvent( 'ready', function(){
 
 				vimeofy.resize();
 
-				// TODO: Remove flicker when iframe is initiating
-				vimeofy.$player.css( 'visibility', 'visible' );
+				setTimeout( function(){
+
+					vimeofy.$player.css({ 'visibility': 'visible' });
+					
+				}, delay );
 			});
 
 			// resize event is available only for 'window',
