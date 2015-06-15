@@ -65,6 +65,8 @@
 		if( !delay ){ delay = 0; }
 		if( !isIOS && !isAndroid ){
 
+			vimeofy.timer = null;
+
 			// Declare player instance
 			vimeofy.$player = $( '<iframe frameborder="0" allowTransparency="true" style="background:transparent;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>' );
 			vimeofy.$player.attr( 'src', vimeofy.url );
@@ -75,17 +77,7 @@
 			// Disable visibility, while loading
 			vimeofy.$player.css({ 'visibility': 'hidden' });
 
-			// Initiation by Froogaloop library
-			$f( vimeofy.$player[ 0 ] ).addEvent( 'ready', function(){
-
-				vimeofy.resize();
-
-				setTimeout( function(){
-
-					vimeofy.$player.css({ 'visibility': 'visible' });
-					
-				}, delay );
-			});
+			vimeofy.resize();
 
 			// resize event is available only for 'window',
 			// use another code solutions to detect DOM elements resizing
@@ -93,6 +85,12 @@
 
 				vimeofy.resize();
 			});
+
+			setTimeout( function(){
+
+				vimeofy.$player.css({ 'visibility': 'visible' });
+				
+			}, delay );
 		}
 	};
 
@@ -209,7 +207,8 @@
 
 				if( instance ){
 
-					instance.resize();
+					clearTimeout( instance.timer );
+					instance.timer = setTimeout( instance.resize(), 250 );
 				}
 			}
 		});
