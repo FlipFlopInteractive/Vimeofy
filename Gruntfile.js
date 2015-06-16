@@ -39,9 +39,6 @@ module.exports = function( grunt ){
 				exclude: [
 					'normalize.less'
 				],
-				dependencies: {
-					'froogaloop': 'jquery',
-				}
 			}
 		},
 

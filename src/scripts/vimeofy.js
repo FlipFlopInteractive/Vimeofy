@@ -29,9 +29,11 @@
 	 */
 	function Vimeofy( element, options ){
 
-		this.$element = $( element );
-		this.url = parseUrl( options );
-		this.init( parseInt( options.delay ));
+		this.$element 	= $( element );
+		this.url 		= parseUrl( options );
+		this.delay 		= ( options.delay ) ? parseInt( options.delay ) : 0;
+
+		this.init();
 	}
 
 
@@ -58,14 +60,11 @@
 	 * Initialization
 	 * @public
 	 */
-	Vimeofy.prototype.init = function( delay ){
+	Vimeofy.prototype.init = function(){
 
 		var vimeofy = this;
-
-		if( !delay ){ delay = 0; }
+		
 		if( !isIOS && !isAndroid ){
-
-			vimeofy.timer = null;
 
 			// Declare player instance
 			vimeofy.$player = $( '<iframe frameborder="0" allowTransparency="true" style="background:transparent;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>' );
@@ -90,7 +89,7 @@
 
 				vimeofy.$player.css({ 'visibility': 'visible' });
 				
-			}, delay );
+			}, this.delay );
 		}
 	};
 
@@ -167,12 +166,11 @@
 
 	/**
 	 * Plugin constructor
-	 * @param {Object|String} path
 	 * @param {Object|String} options
 	 * @returns {JQuery}
 	 * @constructor
 	 */
-	$.fn[ pluginName ] = function( path ){
+	$.fn[ pluginName ] = function( options ){
 
 		var instance;
 
@@ -187,7 +185,7 @@
 			}
 
 			// create plugin instance
-			instance = new Vimeofy( this, path );
+			instance = new Vimeofy( this, options );
 			instance.index = $[ pluginName ].lookup.push( instance ) - 1;
 			$.data( this, pluginName, instance );
 		});
@@ -213,6 +211,5 @@
 			}
 		});
 	});
-
 
 })( window.jQuery, window, document, navigator );
