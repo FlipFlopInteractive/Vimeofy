@@ -1,3 +1,26 @@
+# Vimeofy.js
+
+Vimeofy is an easy to use jQuery plugin that applies a Vimeo player to a DOM element, inspired by Pupunzi's jquery.mb.ytplayer and VodkaBears' Vide.
+
+## Features
+* Full video takeover of any page element.
+* [Grunt](http://gruntjs.com/)-enabled.
+
+## Usage
+
+``` html
+<div id="player"></div>
+<script>
+$('#player').vimeofy({url:'https://vimeo.com/99847222',color:'#00D8D8',autoplay:true,loop:true,delay:5e3})
+</script>
+```
+
+## Inspired by
+* [pupunzi/jquery.mb.YTPlayer](https://github.com/pupunzi/jquery.mb.YTPlayer)
+* [VodkaBears/Vide](https://github.com/VodkaBears/Vide)
+
+## Yadda yadda…
+
 The MIT License (MIT)
 
 Copyright (c) 2015 Flip-Flop Interactive AB
