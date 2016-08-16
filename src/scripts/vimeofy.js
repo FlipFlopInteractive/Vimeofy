@@ -50,8 +50,9 @@
     var color = options.color.replace(/^#/, '?color=');
     var autoplay = options.autoplay ? '&amp;autoplay=1' : '&amp;autoplay=0';
     var loop = options.loop ? '&amp;loop=1' : '&amp;loop=0';
+    var background = options.background ? '&amp;background=1' : '&amp;background=0';
 
-    return url + color + autoplay + loop;
+    return url + color + autoplay + loop + background;
   }
 
 
